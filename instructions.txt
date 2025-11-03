@@ -1,0 +1,49 @@
+# Instruções:
+
+ADD : 0000 : 0
+SUB : 0001 : 1
+MUL : 0010 : 2
+
+JMP : 0100 : 4
+BEQ : 0101 : 5
+BNE : 0110 : 6
+      
+LW : 1000 : 8 
+SW : 1001 : 9
+
+LDI  : 1100 : C
+ADDI : 1101 : D
+SUBI : 1110 : E
+MULI : 1111 : F
+
+# Bit length
+
+0000 0000 0000 0000
+
+# Formato das instruções
+
+add  : op(4) rd(4) rs(4) rt(4)
+sub  : op(4) rd(4) rs(4) rt(4)
+mul  : op(4) rd(4) rs(4) rt(4)
+jump : op(4) adress(7-0)
+beq  : op(4) rs(4) rt(4) imm(4)
+bne  : op(4) rs(4) rt(4) imm(4)
+lw   : op(4) rd(4) rt(4) imm(4)
+sw   : op(4) rs(4) rt(4) imm(4)
+ldi  : op(4) rd(4) rt(4) imm(4)
+addi : op(4) rd(4) rt(4) imm(4)
+subi : op(4) rd(4) rt(4) imm(4)
+muli : op(4) rd(4) rt(4) imm(4)
+
+# Exemplo: Fatorial de um número
+
+    sw $r1, 0     	# N (número o qual será calculado o fatorial)
+    add $r3, $r1, $r0	# resultado (armazena provisóriamente o valor de N)
+    ldi $r2, 1    	# contador 
+    beq $r1, $r0, 4	# se o valor de N for igual a 0, desvia para o encerramento do  programa
+(4) beq $r1, $r2, 3	# se o valor de N for igual ao do contador, desvia para o encerramento do  programa
+    mul $r3, $r3, $r2	# faz a multiplicação
+    addi $r2, $r2, 1	# incrementa o contador
+    j 4			# desvia para loop de teste de igualdade entre N e o contador
+(7) lw $r3, 1		# carrega o resultado para a memória
+    ldi $r15, 10	# comando simbólico para encerrar o programa

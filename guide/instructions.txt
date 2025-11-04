@@ -45,5 +45,5 @@ muli : op(4) rd(4) rt(4) imm(4)
     mul $r3, $r3, $r2	# faz a multiplicação
     addi $r2, $r2, 1	# incrementa o contador
     j 4			# desvia para loop de teste de igualdade entre N e o contador
-(7) lw $r3, 1		# carrega o resultado para a memória
+(8) lw $r3, 1		# carrega o resultado para a memória
     ldi $r15, 10	# comando simbólico para encerrar o programa

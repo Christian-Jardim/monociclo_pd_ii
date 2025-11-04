@@ -11,10 +11,10 @@ entity MuxRegSrc is
  );
 end entity;
 
-architecture bevavior of MuxRegDest is
+architecture behavior of MuxRegDest is
 begin
 
-mux_out <= rd when reg_src = '0' else
+ mux_out <= rd when reg_src = '0' else
 		   rs;
 
 end architecture;

@@ -22,29 +22,9 @@ begin
  begin
  
   -- DECODIFICAÇÕES. quanto menos especificas (menores), mais abaixo devem ficar
-  if op_code = "1000" then -- beq
-   rss <= '0';
-   uss <= '1';
-   ucs <= "00";
-   mws <= '1';
-   mrs <= '0';
-   rws <= '0';
-   bes <= '0';
-   bnes <= '0';
-   js <= '0';
-   
-  elsif op_code = "1001" then -- bne
-   rss <= '0';
-   uss <= '1';
-   ucs <= "00";
-   mws <= '0';
-   mrs <= '0';
-   rws <= '1';
-   bes <= '0';
-   bnes <= '0';
-   js <= '0';
-   
-  elsif op_code = "1100" then -- ldi (igual multi)
+  
+  -- IMEDIATOS 
+  if op_code = "1000" then -- ldi
    rss <= '1';
    uss <= '1';
    ucs <= "00";
@@ -55,7 +35,7 @@ begin
    bnes <= '0';
    js <= '0';
    
-  elsif op_code = "1101" then -- addi
+  elsif op_code = "1001" then -- addi
    rss <= '1';
    uss <= '1';
    ucs <= "00";
@@ -66,7 +46,7 @@ begin
    bnes <= '0';
    js <= '0';
    
-  elsif op_code = "1110" then -- subi
+  elsif op_code = "1010" then -- subi
    rss <= '1';
    uss <= '1';
    ucs <= "01";
@@ -77,7 +57,7 @@ begin
    bnes <= '0';
    js <= '0';
    
-  elsif op_code = "1100" then -- muli (igual ldi)
+  elsif op_code = "1011" then -- muli
    rss <= '1';
    uss <= '1';
    ucs <= "10";
@@ -89,31 +69,35 @@ begin
    js <= '0';
    
    
-   elsif op_code(2 downto 0) = "100" then -- sw
-   rss <= '0';
-   uss <= '0';
+  -- JUMPS E LW/SW  
+  --elsif op_code = "1000" then -- beq
+  elsif op_code = "0100" then -- beq
+   rss <= '1';
+   uss <= '1';
    ucs <= "00";
    mws <= '0';
    mrs <= '0';
-   rws <= '0';
-   bes <= '0';
-   bnes <= '0';
-   js <= '1';
-   
-  elsif op_code(2 downto 0) = "101" then -- lw
-   rss <= '1';
-   uss <= '0';
-   ucs <= "00";
-   mws <= '0';
-   mrs <= '1';
    rws <= '0';
    bes <= '1';
    bnes <= '0';
    js <= '0';
    
-  elsif op_code(2 downto 0) = "110" then -- j
+  --elsif op_code = "1001" then -- bne
+  elsif op_code = "0101" then -- bne
    rss <= '1';
-   uss <= '0';
+   uss <= '1';
+   ucs <= "00";
+   mws <= '0';
+   mrs <= '0';
+   rws <= '0';
+   bes <= '0';
+   bnes <= '1';
+   js <= '0';
+   
+  --elsif op_code(2 downto 0) = "110" then -- jmp
+  elsif op_code = "0110" then -- jmp
+   rss <= '1';
+   uss <= '1';
    ucs <= "00";
    mws <= '0';
    mrs <= '0';
@@ -121,6 +105,30 @@ begin
    bes <= '0';
    bnes <= '0';
    js <= '1';
+   
+  --elsif op_code(2 downto 0) = "100" then -- sw
+  elsif op_code = "0111" then -- sw
+   rss <= '1';
+   uss <= '1';
+   ucs <= "00";
+   mws <= '1';
+   mrs <= '0';
+   rws <= '0';
+   bes <= '0';
+   bnes <= '0';
+   js <= '0';
+   
+  --elsif op_code(2 downto 0) = "101" then -- lw
+  elsif op_code = "0000" then -- lw
+   rss <= '1';
+   uss <= '1';
+   ucs <= "00";
+   mws <= '0';
+   mrs <= '0';
+   rws <= '1';
+   bes <= '0';
+   bnes <= '0';
+   js <= '0';
    
    
    -- os dois bits menos significativos do opcode -> ula control (seletor)
@@ -156,6 +164,18 @@ begin
    mws <= '0';
    mrs <= '1';
    rws <= '1';
+   bes <= '0';
+   bnes <= '0';
+   js <= '0';
+   
+  else 
+   -- Desligar tudo (estado seguro)
+   rss <= '0';
+   uss <= '0';
+   ucs <= "00";
+   mws <= '0';
+   mrs <= '0';
+   rws <= '0';
    bes <= '0';
    bnes <= '0';
    js <= '0';

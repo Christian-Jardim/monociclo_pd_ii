@@ -7,14 +7,14 @@ entity MuxRegSrc is
  port(
   ula_src : in std_logic;
   rt,  imm : in std_logic_vector(15 downto 0);
-  ula_out : out std_logic_vector(15 downto 0)
+  mux_out : out std_logic_vector(15 downto 0)
  );
 end entity;
 
-architecture bevavior of MuxRegDest is
+architecture behavior of MuxRegDest is
 begin
 
-ula_out <= rt when reg_src = '0' else
+ mux_out <= rt when ula_src = '0' else
 		   imm;
 
 end architecture;

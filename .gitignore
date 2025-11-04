@@ -1,0 +1,6 @@
+# arquivos de backup, temporários e caches
+*.bak
+*.cr.mti
+
+# ignore pasta de compilação e cache do ModelSim
+src/work/

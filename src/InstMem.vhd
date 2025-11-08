@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity InstMem is
+entity InstMem is -- ROM (Memória de Instruções)
  port(
   adress : in std_logic_vector(7 downto 0);
   instMem_out : out std_logic_vector(15 downto 0)
@@ -28,6 +28,6 @@ begin
  mem(8) <= x"8301";
  mem(9) <= x"CF0A";
   
- instMem_out <= mem(con_integer(adress));
+ instMem_out <= mem(conv_integer(adress));
   
 end architecture;

@@ -6,10 +6,11 @@ use ieee.std_logic_unsigned.all;
 entity RegBank is
  port(
   clock, reset, reg_write : in std_logic;
-  reg_a, reg_b, reg_dest, data : in std_logic_vector(3 downto 0);
-  a_out, b_out : out std_logic_vector(3 downto 0)
+  reg_a, reg_b, reg_dest : in std_logic_vector(3 downto 0);--4?
+  data : in std_logic_vector(15 downto 0);
+  a_out, b_out : out std_logic_vector(15 downto 0)--4?
  );
-end entity
+end entity;
 
 architecture behavior of RegBank is
 
@@ -24,19 +25,21 @@ begin
  
   if reset = '1' then
    regBank <= (others => (others => '0'));
-  else
-   if rising_edge(clock) then
+  elsif rising_edge(clock) then   
     if reg_write = '1' then
-     regBank(reg_dest) <= data;
-    end if;
-    readed_a <= reg_a;
-    readed_b <= reg_b;
+     --regBank(reg_dest) <= data;
+     regBank(conv_integer(reg_dest)) <= data;
+    -- end if;
+    --readed_a <= reg_a;
+    --readed_b <= reg_b;
    end if;
   end if;
   
  end process;
  
- a_out <= readed_a;
- b_out <= readed_b;
+ --a_out  <= readed_a;
+ --b_out  <= readed_b;
+ readed_a <= regBank(conv_integer(reg_a));
+ readed_b <= regBank(conv_integer(reg_b));
  
 end architecture;

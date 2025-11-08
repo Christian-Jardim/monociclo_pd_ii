@@ -19,20 +19,21 @@ architecture behavior of DataMem is
 
 begin
 
- mem(0) <= x"0004"; 
+ mem(0) <= x"0004";
+ -- signal mem : memory := (0 => x"0004", others => (others => '0'));
  
- process(clock, mem_write)
+ process(clock, mem_write) -- monociclo = leitura assíncrona (combinatorial)
  begin
  
   if rising_edge(clock) then
    if mem_write = '1' then
     mem(conv_integer(adress)) <= data;
    end if;
-   readed_data <= mem(conv_integer(adress));
   end if;
 
  end process;
 
+ readed_data <= mem(conv_integer(adress));
  dataMem_out <= readed_data;
 
 end architecture;

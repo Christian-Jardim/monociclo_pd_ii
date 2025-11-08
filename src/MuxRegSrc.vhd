@@ -6,15 +6,14 @@ use ieee.std_logic_unsigned.all;
 entity MuxRegSrc is
  port(
   reg_src : in std_logic;
-  rd,  rs : in std_logic_vector(15 downto 0);
-  mux_out : out std_logic_vector(15 downto 0)
+  rd,  rs : in std_logic_vector(3 downto 0);
+  mux_out : out std_logic_vector(3 downto 0)
  );
 end entity;
 
-architecture behavior of MuxRegDest is
+architecture behavior of MuxRegSrc is
 begin
 
- mux_out <= rd when reg_src = '0' else
-		   rs;
+ mux_out <= rd when reg_src = '1' else rs;
 
 end architecture;

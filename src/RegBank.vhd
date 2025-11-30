@@ -39,7 +39,7 @@ begin
  
  --a_out  <= readed_a;
  --b_out  <= readed_b;
- readed_a <= regBank(conv_integer(reg_a));
- readed_b <= regBank(conv_integer(reg_b));
+ a_out <= regBank(conv_integer(reg_a));
+ b_out <= regBank(conv_integer(reg_b));
  
 end architecture;

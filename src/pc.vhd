@@ -1,18 +1,26 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
 
-entity PC is
+entity pc is
  port(
-  pc_next : in std_logic_vector(3 downto 0);
-  pc_out : out std_logic_vector(3 downto 0)
+  clock   : in std_logic;
+  reset   : in std_logic;
+  pc_next : in std_logic_vector(7 downto 0);
+  pc_out  : out std_logic_vector(7 downto 0)
  );
 end entity;
 
-architecture behavior of PC is
+architecture behavior of pc is
 begin
 
- 
+process(clock, reset)
+ begin
+  if reset = '1' then
+   pc_out <= (others => '0');
+  
+  elsif rising_edge(clock) then
+    pc_out <= pc_next;
+  end if;
+end process;
 
 end architecture;

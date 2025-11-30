@@ -19,7 +19,6 @@ architecture behavior of DataMem is
 
 begin
 
- mem(0) <= x"0004";
  -- signal mem : memory := (0 => x"0004", others => (others => '0'));
  
  process(clock, mem_write) -- monociclo = leitura assíncrona (combinatorial)

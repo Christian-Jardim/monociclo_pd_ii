@@ -5,8 +5,12 @@ use ieee.std_logic_arith.all;
 
 entity top_SinglecycleProcessor is
     port(
-            clock       : in std_logic;     
-            reset  : in std_logic
+            clock  : in std_logic;     
+            reset  : in std_logic;
+            
+            debug_reg_a : out std_logic_vector(15 downto 0);
+            debug_reg_b : out std_logic_vector(15 downto 0);
+            debug_pc    : out std_logic_vector(7 downto 0)
             );
 end entity;
 
@@ -127,7 +131,11 @@ architecture behavior of top_SinglecycleProcessor is
     signal s_branch_check  : std_logic; 
 
 begin
-
+  
+    debug_reg_a <= s_data_reg_a;
+    debug_reg_b <= s_data_reg_b;
+    debug_pc    <= s_pc_atual;
+  
     -- AUX
 
     -- extensão de sinal

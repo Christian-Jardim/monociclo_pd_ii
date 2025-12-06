@@ -1,0 +1,78 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity ID_EX is
+ port(
+  clock, reset : in std_logic;
+  reg_src, ula_src, mem_write, mem_to_reg, reg_write, branch_e, branch_ne, jump : in std_logic;
+  pv : in std_logic_vector(7 downto 0);
+  a, b : in std_logic_vector(15 downto 0);
+  rs, rd : in std_logic_vector(3 downto 0);
+  
+  reg_src_out, ula_src_out, mem_write_out, mem_to_reg_out, reg_write_out, branch_e_out, branch_ne_out, jump_out : out std_logic;
+  pc_out : out std_logic_vector(7 downto 0);
+  a_out, b_out : out std_logic_vector(15 downto 0);
+  rs_out, rd_out : out std_logic_vector(3 downto 0)
+  
+ );
+end entity;
+
+architecture behavior of ID_EX is
+
+ signal reg_src_s, ula_src_s, mem_write_s, mem_to_reg_s, reg_write_s, branch_e_s, branch_ne_s, jump_s : std_logic;
+ signal pc_s : std_logic_vector(7 downto 0);
+ signal a_s, b_s : std_logic_vector(15 downto 0);
+ signal rs_s, rd_s : std_logic_vector(3 downto 0);
+
+begin
+
+ process(clock, reset)
+ begin
+  if reset = '1' then
+   reg_src_s <= '0';
+   ula_src_s <= '0';
+   mem_write_s <= '0';
+   mem_to_reg_s <= '0';
+   reg_write_s <= '0';
+   branch_e_s <= '0';
+   branch_ne_s <= '0';
+   jump_s <= '0';
+   a_s <= (others => '0');
+   b_s <= (others => '0');
+   pc_s <= (others => '0');
+   rs_s <= (others => '0');
+   rd_s <= (others => '0');
+  elsif rising_edge(clock) then
+   reg_src_s <= reg_src;
+   ula_src_s <= ula_src;
+   mem_write_s <= mem_write;
+   mem_to_reg_s <= mem_to_reg_s;
+   reg_write_s <= reg_write_s;
+   branch_e_s <= branch_e_s;
+   branch_ne_s <= branch_ne_s;
+   jump_s <= jump;
+   a_s <= a;
+   b_s <= b;
+   pc_s <= pc;
+   rs_s <= rs;
+   rd_s <= rd;
+  end if;
+ end process;
+ 
+ reg_src_out <= reg_src_s;
+ ula_src_out <= ula_src_s;
+ mem_write_out <= mem_write_s;
+ mem_to_reg_out <= mem_to_reg_s;
+ reg_write_out <= reg_write_s;
+ branch_e_out <= branch_e_s;
+ branch_ne_out <= branch_ne_s;
+ jump_out <= jump_s;
+ a_out <= a_s;
+ b_out <= b_s;
+ pc_out <= pc_s;
+ rs_out <= rs_s;
+ rd_out <= rd_s;
+ 
+end architecture;

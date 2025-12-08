@@ -18,10 +18,8 @@ architecture behavior of DataMem is
  signal readed_data : std_logic_vector(15 downto 0);
 
 begin
-
- mem(1) <= x"0004";
  
- process(clock, mem_write) -- monociclo = leitura assíncrona (combinatorial)
+ process(clock, mem_write) -- monociclo = leitura assÃ­ncrona (combinatorial)
  begin
  
   if rising_edge(clock) then

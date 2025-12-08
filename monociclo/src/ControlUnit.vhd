@@ -1,4 +1,4 @@
-library ieee;
+	library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
@@ -21,12 +21,10 @@ begin
  process(op_code)
  begin
  
-  -- DECODIFICACOES. quanto menos especificas (menores), mais abaixo devem ficar
-  
-  -- IMEDIATOS 
+  -- DECODIFICACOES 
   
   -- LDI / ADDI (tratados iguais na ULA)
-  if op_code = "1000" or op_code = "1001" then 
+  if op_code = "1100" or op_code = "1101" then 
    rss <= '0';
    uss <= '1';
    ucs <= "00";
@@ -37,7 +35,7 @@ begin
    bnes <= '0'; 
    js <= '0';
     
-  elsif op_code = "1010" then -- subi
+  elsif op_code = "1110" then -- subi
    rss <= '0';
    uss <= '1';
    ucs <= "01";
@@ -48,7 +46,7 @@ begin
    bnes <= '0';
    js <= '0';
    
-  elsif op_code = "1011" then -- muli
+  elsif op_code = "1111" then -- muli
    rss <= '0';
    uss <= '1';
    ucs <= "10";
@@ -58,10 +56,7 @@ begin
    bes <= '0';
    bnes <= '0';
    js <= '0';
-   
-   
-  -- JUMPS E LW/SW  
-  --elsif op_code = "1000" then -- beq
+    
   elsif op_code = "0100" then -- beq
    rss <= '0';
    uss <= '0';
@@ -73,7 +68,6 @@ begin
    bnes <= '0';
    js <= '0';
    
-  --elsif op_code = "1001" then -- bne
   elsif op_code = "0101" then -- bne
    rss <= '0';
    uss <= '0';
@@ -85,7 +79,6 @@ begin
    bnes <= '1';
    js <= '0';
    
-  --elsif op_code(2 downto 0) = "110" then -- jmp
   elsif op_code = "0110" then -- jmp
    rss <= '0';
    uss <= '0';
@@ -97,8 +90,7 @@ begin
    bnes <= '0';
    js <= '1';
    
-  --elsif op_code(2 downto 0) = "100" then -- sw
-  elsif op_code = "0111" then -- sw
+  elsif op_code = "1000" then -- sw
    rss <= '0';
    uss <= '1';
    ucs <= "00";
@@ -109,8 +101,7 @@ begin
    bnes <= '0';
    js <= '0';
    
-  --elsif op_code(2 downto 0) = "101" then -- lw
-  elsif op_code = "0000" then -- lw
+  elsif op_code = "1001" then -- lw
    rss <= '0';
    uss <= '1';
    ucs <= "00";
@@ -121,10 +112,7 @@ begin
    bnes <= '0';
    js <= '0';
    
-   
-   -- os dois bits menos significativos do opcode -> ula control (seletor)
-   --if op_code(1 downto 0) = "00" then -- add
-  elsif op_code(1 downto 0) = "01" then -- add
+  elsif op_code = "0001" then -- add
    rss <= '1';
    uss <= '0';
    ucs <= "01";
@@ -135,8 +123,7 @@ begin
    bnes <= '0';
    js <= '0';
    
-  --elsif op_code(1 downto 0) = "01" then -- sub
-  elsif op_code(1 downto 0) = "10" then -- sub
+  elsif op_code = "0010" then -- sub
    rss <= '1';
    uss <= '0';
    ucs <= "10";
@@ -147,8 +134,7 @@ begin
    bnes <= '0';
    js <= '0';
    
-  --elsif op_code(1 downto 0) = "10" then -- mul
-  elsif op_code(1 downto 0) = "11" then -- mul
+  elsif op_code = "0011" then -- mul
    rss <= '1';
    uss <= '0';
    ucs <= "11";

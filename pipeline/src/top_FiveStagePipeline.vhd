@@ -5,7 +5,8 @@ use ieee.numeric_std.all;
 entity top_FiveStagePipeline is
     port(
         clock  : in std_logic;     
-        reset  : in std_logic
+        reset  : in std_logic;
+		pc_out : out std_logic_vector(7 downto 0);
     );
 end entity;
 
@@ -13,7 +14,7 @@ end entity;
 architecture behavior of top_FiveStagePipeline is 
 
     -- =================================================================================
-    -- 1. DECLARA«√O DOS COMPONENTES
+    -- 1. DECLARA√á√ÉO DOS COMPONENTES
     -- =================================================================================
     
     component pc is
@@ -223,7 +224,7 @@ architecture behavior of top_FiveStagePipeline is
 
 
     -- =================================================================================
-    -- 2. DECLARA«√O DOS SINAIS DE PIPELINE, DADOS E CONTROLE
+    -- 2. DECLARA√á√ÉO DOS SINAIS DE PIPELINE, DADOS E CONTROLE
     -- =================================================================================
     
     -- PC/IF
@@ -286,15 +287,16 @@ architecture behavior of top_FiveStagePipeline is
 
 begin
     
-
-    -- extens„o de sinal
+	pc_out <= s_pc_atual;
+	
+    -- extens√£o de sinal
     s_imediato_ext <= x"000" & s_inst_ifid(3 downto 0);    
 
     -- =================================================================================
-    -- 3. INSTANCIA«’ES E CONEX’ES DOS EST¡GIOS
+    -- 3. INSTANCIA√á√ïES E CONEX√ïES DOS EST√ÅGIOS
     -- =================================================================================
 
-    -- EST¡GIO 1: IF (Instruction Fetch)
+    -- EST√ÅGIO 1: IF (Instruction Fetch)
 
     inst_pc: pc
         port map(
@@ -329,8 +331,7 @@ begin
             inst_out => s_inst_ifid
         );
 
-
-    -- EST¡GIO 2: ID (Instruction Decode)
+    -- EST√ÅGIO 2: ID (Instruction Decode)
 
     inst_ControlUnit: ControlUnit
         port map(
@@ -393,7 +394,7 @@ begin
             rt         => s_inst_ifid(7 downto 4),
             rd         => s_inst_ifid(3 downto 0),
             
-            -- SaÌdas (para EX)
+            -- Sa√≠das (para EX)
             ula_control_out => s_ula_control_idex,
             reg_src_out    => s_reg_src_idex,
             ula_src_out    => s_ula_src_idex,
@@ -412,8 +413,7 @@ begin
             rd_out         => s_rd_idex
         );
 
-
-    -- EST¡GIO 3: EX (Execute)
+    -- EST√ÅGIO 3: EX (Execute)
 
     inst_MuxULASrc: MuxULASrc
         port map(
@@ -524,7 +524,7 @@ begin
             b          => s_ula_entry_b_final,
 	        rt		   => s_rt_idex,
             rd         => s_dest_addr,
-            -- SaÌdas (para MEM)
+            -- Sa√≠das (para MEM)
             mem_write_out  => s_mem_write_exmem,
             mem_to_reg_out => s_mem_to_reg_exmem,
             reg_write_out  => s_reg_write_exmem, 
@@ -537,8 +537,7 @@ begin
             rd_out         => s_rd_exmem
         );
 
-
-    -- EST¡GIO 4: MEM (Memory)
+    -- EST√ÅGIO 4: MEM (Memory)
     
     s_forward_data_mem <= "01" when (s_reg_write_exmem = '1' and s_rd_exmem /= "0000" and s_rd_exmem = s_rt_exmem) else -- Prioridade 1: EX/MEM -> MEM
                       "10" when (s_reg_write_memwb = '1' and s_rd_memwb /= "0000" and s_rd_memwb = s_rt_exmem) else -- Prioridade 2: MEM/WB -> MEM
@@ -546,7 +545,7 @@ begin
     
     with s_forward_data_mem select
     s_data_for_mem_forwarded <= s_data_for_mem_exmem when "00",     -- 00: Valor original de EX/MEM
-                                s_ula_out_exmem when "01",          -- 01: EX/MEM (Resultado ULA - WriteBack mais r·pido)
+                                s_ula_out_exmem when "01",          -- 01: EX/MEM (Resultado ULA - WriteBack mais r√°pido)
                                 s_data_to_write when "10",    -- 10: MEM/WB (Resultado Final)
                                 (others => '0') when others;
 
@@ -571,7 +570,7 @@ begin
             mem_out    => s_mem_data_read,
             ula_out    => s_ula_out_exmem,
             rd         => s_rd_exmem,
-            -- SaÌdas (para WB)
+            -- Sa√≠das (para WB)
             mem_to_reg_out => s_mem_to_reg_memwb,
             reg_write_out  => s_reg_write_memwb,
             mem_out_out    => s_mem_out_memwb,
@@ -579,8 +578,7 @@ begin
             rd_out         => s_rd_memwb
         );
 
-
-    -- EST¡GIO 5: WB (Write Back)
+    -- EST√ÅGIO 5: WB (Write Back)
 
     inst_MuxMemReg: MuxMemReg
         port map(

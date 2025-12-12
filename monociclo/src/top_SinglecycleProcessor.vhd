@@ -5,11 +5,11 @@ use ieee.std_logic_arith.all;
 
 entity top_SinglecycleProcessor is
     port(
-            clock       : in std_logic;     
-            reset  : in std_logic
+            clock  : in std_logic;
+            reset  : in std_logic;
+            pc_out : out std_logic_vector(7 downto 0);
             );
 end entity;
-
 
 architecture behavior of top_SinglecycleProcessor is 
 
@@ -119,7 +119,7 @@ architecture behavior of top_SinglecycleProcessor is
     signal s_ula_result    : std_logic_vector(15 downto 0); 
     signal s_ula_zero      : std_logic;                     
 
-    -- memória de dados
+    -- memÃ³ria de dados
     signal s_mem_data_read : std_logic_vector(15 downto 0); 
 
     -- aux
@@ -128,16 +128,16 @@ architecture behavior of top_SinglecycleProcessor is
 
 begin
 
-    -- AUX
+    pc_out <= s_pc_atual; 
 
-    -- extensão de sinal
+    -- extensÃ£o de sinal
     s_imediato_ext <= x"000" & s_instruction(3 downto 0);
 
-    -- decisão do branch
+    -- decisÃ£o do branch
     s_branch_check <= '1' when (s_branch_e = '1' and s_ula_zero = '1') or 
                                (s_branch_ne = '1' and s_ula_zero = '0') else '0';
 
-    -- mux do próximo PC
+    -- mux do prÃ³ximo PC
     process(s_pc_mais_1, s_branch_check, s_imediato_ext, s_jump, s_instruction)
     begin
         if s_jump = '1' then
@@ -150,7 +150,6 @@ begin
             s_pc_next <= s_pc_mais_1;
         end if;
     end process;
-
 
     inst_pc: pc
         port map(

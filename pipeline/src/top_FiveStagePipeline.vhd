@@ -6,7 +6,7 @@ entity top_FiveStagePipeline is
     port(
         clock  : in std_logic;     
         reset  : in std_logic;
-		pc_out : out std_logic_vector(7 downto 0);
+		pc_out : out std_logic_vector(7 downto 0)
     );
 end entity;
 

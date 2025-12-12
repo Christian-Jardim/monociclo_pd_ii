@@ -1,6 +1,7 @@
 library ieee;                  
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
 
 entity top_FiveStagePipeline is
     port(
@@ -492,8 +493,7 @@ begin
                                (s_branch_ne_idex = '1' and s_ula_zero = '0')) else '0';
     s_jump_taken <= s_jump_idex;
     
-    s_branch_target <= std_logic_vector(unsigned(s_pc_mais_1) + 
-                                        unsigned(s_imm_ext_idex(7 downto 0)));
+    s_branch_target <= s_pc_mais_1 + s_imm_ext_idex(7 downto 0));
     
     s_jump_target <= s_imm_ext_idex(7 downto 0);
                                       

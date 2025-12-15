@@ -1,0 +1,36 @@
+# Instruções:
+
+ADD : 0001 : 1
+SUB : 0010 : 2
+MUL : 0011 : 3
+
+BEQ : 0100 : 4
+BNE : 0101 : 5
+J   : 0110 : 6
+      
+SW : 1000 : 7 
+LW : 1001 : 8
+
+LDI  : 1100 : 9
+ADDI : 1101 : A
+SUBI : 1110 : B
+MULI : 1111 : C
+
+# Bit length
+
+0000 0000 0000 0000 (16)
+
+# Formato das instruções
+
+add  : op(4) rt(4) rs(4) rd(4)
+sub  : op(4) rt(4) rs(4) rd(4)
+mul  : op(4) rt(4) rs(4) rd(4)
+beq  : op(4) rt(4) rs(4) imm(4)
+bne  : op(4) rt(4) rs(4) imm(4)
+jump : op(4) adress(7-0)
+sw   : op(4) rt(4) rs(4) imm(4)
+lw   : op(4) rt(4) rd(4) imm(4)
+ldi  : op(4) rt(4) rd(4) imm(4)
+addi : op(4) rt(4) rtd(4) imm(4)
+subi : op(4) rt(4) rd(4) imm(4)
+muli : op(4) rt(4) rd(4) imm(4)

@@ -1,0 +1,943 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/monociclo/src
+Ebranchflushunit
+Z0 w1765232106
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 830
+Z4 d/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src
+Z5 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/BranchFlushUnit.vhd
+Z6 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/BranchFlushUnit.vhd
+l0
+L5 1
+VM_32kBMQH>lbB>hgJ?]TJ2
+!s100 ;M>oT:XVH_^Ef90?Bj=;N3
+Z7 OV;C;2020.1;71
+33
+Z8 !s110 1765754782
+!i10b 1
+Z9 !s108 1765754782.000000
+Z10 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/BranchFlushUnit.vhd|
+Z11 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/BranchFlushUnit.vhd|
+!i113 1
+Z12 o-work work -2008 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+R3
+DEx4 work 15 branchflushunit 0 22 M_32kBMQH>lbB>hgJ?]TJ2
+!i122 830
+l20
+L18 20
+Vhz???bNOE:jBaV:KMoHO[3
+!s100 1AXeCRUKWRKZ5<^jXl2cA2
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econtrolunit
+Z14 w1765750767
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z16 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+!i122 831
+R4
+Z17 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ControlUnit.vhd
+Z18 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ControlUnit.vhd
+l0
+L6 1
+VAhbVZNG=I]T56`zBBKTKG2
+!s100 Ma=ecQ_S[ak9d=S_oeg>22
+R7
+33
+R8
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ControlUnit.vhd|
+Z20 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ControlUnit.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 11 controlunit 0 22 AhbVZNG=I]T56`zBBKTKG2
+!i122 831
+l16
+L14 147
+VGoCUYR<Ik[RjZ341afRni1
+!s100 3UVYl@iiIOoZTG`P7=4Kk2
+R7
+33
+R8
+!i10b 1
+R9
+R19
+R20
+!i113 1
+R12
+R13
+Edatamem
+Z21 w1765660844
+R15
+R16
+R2
+R3
+!i122 832
+R4
+Z22 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/DataMem.vhd
+Z23 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/DataMem.vhd
+l0
+L6 1
+Vl4IbS;?jYSa6g;PN^aZN91
+!s100 4?kOGX6kdaTo@L]6a<;oa1
+R7
+33
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/DataMem.vhd|
+Z25 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/DataMem.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 7 datamem 0 22 l4IbS;?jYSa6g;PN^aZN91
+!i122 832
+l22
+L14 24
+VaZd739V30G>C:HN58dk:63
+!s100 LVZ7PJ5Z@>d6kzkkThDCT3
+R7
+33
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R12
+R13
+Eex_mem
+Z26 w1765749476
+R15
+R16
+R2
+R3
+!i122 833
+R4
+Z27 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/EX_MEM.vhd
+Z28 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/EX_MEM.vhd
+l0
+L6 1
+VeDS9e9UoJ]mbHk`_zSe:_0
+!s100 1n`Z?2OQV[YR_idIJ56CU2
+R7
+33
+Z29 !s110 1765754783
+!i10b 1
+R9
+Z30 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/EX_MEM.vhd|
+Z31 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/EX_MEM.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 6 ex_mem 0 22 eDS9e9UoJ]mbHk`_zSe:_0
+!i122 833
+l21
+L19 32
+ViW73S0cJz]nK<^[PcOY?C1
+!s100 Y5UH2[`G>Q=<b@7><]D=h2
+R7
+33
+R29
+!i10b 1
+R9
+R30
+R31
+!i113 1
+R12
+R13
+Eforwardingmux
+R0
+R1
+R2
+R3
+!i122 834
+R4
+Z32 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ForwardingMux.vhd
+Z33 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ForwardingMux.vhd
+l0
+L5 1
+V2E<EhB7:HJ:WHGzH^>b:n2
+!s100 mF4FD3OS`TMTF6kA`UK412
+R7
+33
+R29
+!i10b 1
+Z34 !s108 1765754783.000000
+Z35 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ForwardingMux.vhd|
+Z36 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ForwardingMux.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 13 forwardingmux 0 22 2E<EhB7:HJ:WHGzH^>b:n2
+!i122 834
+l18
+L17 10
+VRbn13:LU@K7F;7:JH37Ua0
+!s100 `R7a]DbF4_<K`NSGJX]VY0
+R7
+33
+R29
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R12
+R13
+Eforwardingunit
+Z37 w1765746817
+R1
+R2
+R3
+!i122 835
+R4
+Z38 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ForwardingUnit.vhd
+Z39 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ForwardingUnit.vhd
+l0
+L5 1
+V6fQ]jG70QhIemRXejFd9Y1
+!s100 2aYg>NzaFmV0;;zS7adIa0
+R7
+33
+R29
+!i10b 1
+R34
+Z40 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ForwardingUnit.vhd|
+Z41 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ForwardingUnit.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 14 forwardingunit 0 22 6fQ]jG70QhIemRXejFd9Y1
+!i122 835
+l29
+L22 39
+VELo?QG<[Zi0GYF5WeM?9l0
+!s100 3]mZT@DAPJiKM6DgCMNTW0
+R7
+33
+R29
+!i10b 1
+R34
+R40
+R41
+!i113 1
+R12
+R13
+Ehazarddetectionunit
+R0
+R1
+R2
+R3
+!i122 124
+R4
+Z42 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/HazardDetectionUnit.vhd
+Z43 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/HazardDetectionUnit.vhd
+l0
+L5 1
+V``N:3N2QfYcFM?lSz5Nl60
+!s100 _I<FlT635?jJ3Y_iDYXJH2
+R7
+33
+Z44 !s110 1765654848
+!i10b 1
+Z45 !s108 1765654848.000000
+Z46 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/HazardDetectionUnit.vhd|
+Z47 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/HazardDetectionUnit.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 19 hazarddetectionunit 0 22 ``N:3N2QfYcFM?lSz5Nl60
+!i122 124
+l20
+L19 19
+V;N5d>WJVl?2eFOVTU5lWg3
+!s100 >A7ozg6J:FnNj?>6H:j:n3
+R7
+33
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R12
+R13
+Eid_ex
+Z48 w1765748288
+R15
+R16
+R2
+R3
+!i122 836
+R4
+Z49 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ID_EX.vhd
+Z50 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ID_EX.vhd
+l0
+L6 1
+V48d@lWVY]:Z?V<e^XSODk2
+!s100 PT9zUhX9dLI_Yhb=ACHWo1
+R7
+33
+R29
+!i10b 1
+R34
+Z51 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ID_EX.vhd|
+Z52 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ID_EX.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 5 id_ex 0 22 48d@lWVY]:Z?V<e^XSODk2
+!i122 836
+l26
+L24 44
+V8So1:;OFK=9L3LBN@I7RF2
+!s100 ajFzMM[^ehOPklR0lnK7m2
+R7
+33
+R29
+!i10b 1
+R34
+R51
+R52
+!i113 1
+R12
+R13
+Eif_id
+Z53 w1765748117
+R15
+R16
+R2
+R3
+!i122 837
+R4
+Z54 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/IF_ID.vhd
+Z55 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/IF_ID.vhd
+l0
+L6 1
+V9TMUWPSl9eoVT;TSU_Xfm3
+!s100 kf:ASh73E`K^^@>eL<4^^0
+R7
+33
+R29
+!i10b 1
+R34
+Z56 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/IF_ID.vhd|
+Z57 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/IF_ID.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 5 if_id 0 22 9TMUWPSl9eoVT;TSU_Xfm3
+!i122 837
+l18
+L16 16
+VKD:7n=YdzbnLOSR4=:SRk2
+!s100 NP1;zR7]?PQIQ_mBn5WX[1
+R7
+33
+R29
+!i10b 1
+R34
+R56
+R57
+!i113 1
+R12
+R13
+Einstmem
+Z58 w1765754096
+R15
+R16
+R2
+R3
+!i122 838
+R4
+Z59 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/InstMem.vhd
+Z60 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/InstMem.vhd
+l0
+L6 1
+VfceK6aXNQGg>WC<;5@o0a2
+!s100 S[QbcZS@=7I[8:Gm0@F>F2
+R7
+33
+R29
+!i10b 1
+R34
+Z61 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/InstMem.vhd|
+Z62 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/InstMem.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 7 instmem 0 22 fceK6aXNQGg>WC<;5@o0a2
+!i122 838
+l48
+L13 40
+Vg[JGKBOf5@A;f>Xah5^cM0
+!s100 0O;^IF:@;zA`?ocTDJ4d;1
+R7
+33
+R29
+!i10b 1
+R34
+R61
+R62
+!i113 1
+R12
+R13
+Emem_wb
+Z63 w1765748866
+R15
+R16
+R2
+R3
+!i122 839
+R4
+Z64 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MEM_WB.vhd
+Z65 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MEM_WB.vhd
+l0
+L6 1
+VUN]3W=>h]7Z:QcG6LD09a3
+!s100 Y;`2zg3EQo5LSLRKoJM8I1
+R7
+33
+R29
+!i10b 1
+R34
+Z66 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MEM_WB.vhd|
+Z67 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MEM_WB.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 6 mem_wb 0 22 UN]3W=>h]7Z:QcG6LD09a3
+!i122 839
+l21
+L19 22
+V1Lnbgo1H7ajRWQU3g5=@?2
+!s100 C3zFbS>C;<53eJ_SoE4^`1
+R7
+33
+R29
+!i10b 1
+R34
+R66
+R67
+!i113 1
+R12
+R13
+Emuxmemreg
+R0
+R15
+R16
+R2
+R3
+!i122 840
+R4
+Z68 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxMemReg.vhd
+Z69 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxMemReg.vhd
+l0
+L6 1
+V3IU8GPCL5Ed^8PUJ]7^e63
+!s100 ]g]><L3Qk80V^PSQL1jNZ0
+R7
+33
+R29
+!i10b 1
+R34
+Z70 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxMemReg.vhd|
+Z71 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxMemReg.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 9 muxmemreg 0 22 3IU8GPCL5Ed^8PUJ]7^e63
+!i122 840
+l16
+L15 6
+VAEkD[7U007F;QU>5LU=UO1
+!s100 HNXiLz_5Ch_ZU1Y7iC1EF2
+R7
+33
+R29
+!i10b 1
+R34
+R70
+R71
+!i113 1
+R12
+R13
+Emuxregsrc
+Z72 w1765659957
+R15
+R16
+R2
+R3
+!i122 841
+R4
+Z73 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxRegSrc.vhd
+Z74 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxRegSrc.vhd
+l0
+L6 1
+VR3V0VUY;@fa]4lFNc;G4E1
+!s100 54T^4bPmbakQ6Z<^3Vf>X1
+R7
+33
+R29
+!i10b 1
+R34
+Z75 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxRegSrc.vhd|
+Z76 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxRegSrc.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 9 muxregsrc 0 22 R3V0VUY;@fa]4lFNc;G4E1
+!i122 841
+l15
+Z77 L14 6
+VBAmCzn5zO5YD7=92Eh2e73
+!s100 S:36XBZ[?:DKf@_E?HeLM1
+R7
+33
+R29
+!i10b 1
+R34
+R75
+R76
+!i113 1
+R12
+R13
+Emuxulasrc
+Z78 w1765746373
+R15
+R16
+R2
+R3
+!i122 842
+R4
+Z79 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxULASrc.vhd
+Z80 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxULASrc.vhd
+l0
+L6 1
+VbUc6_:@WkjOPil12Ck8Ji2
+!s100 71ljY6kdk3ncn3f[jgbAi0
+R7
+33
+R29
+!i10b 1
+R34
+Z81 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxULASrc.vhd|
+Z82 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/MuxULASrc.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 9 muxulasrc 0 22 bUc6_:@WkjOPil12Ck8Ji2
+!i122 842
+l15
+R77
+V>k6GDM1ANiV1TY64YYjk=1
+!s100 Gn=L[_WHV4S7i0]=@imm43
+R7
+33
+R29
+!i10b 1
+R34
+R81
+R82
+!i113 1
+R12
+R13
+Epc
+Z83 w1765747958
+R2
+R3
+!i122 843
+R4
+Z84 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/pc.vhd
+Z85 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/pc.vhd
+l0
+L4 1
+Vl04kldIQUWc81n9zhheDz1
+!s100 :FiOzSk:9I=kQEKM5i?5J1
+R7
+33
+R29
+!i10b 1
+R34
+Z86 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/pc.vhd|
+Z87 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/pc.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 2 pc 0 22 l04kldIQUWc81n9zhheDz1
+!i122 843
+l15
+L13 14
+V]^oVfRT]3CBWRH73O8je@1
+!s100 Hf6eOSLLSLolI>@hT8D=00
+R7
+33
+R29
+!i10b 1
+R34
+R86
+R87
+!i113 1
+R12
+R13
+Epc_adder
+R0
+R15
+R16
+R2
+R3
+!i122 596
+R4
+Z88 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/PC_Adder.vhd
+Z89 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/PC_Adder.vhd
+l0
+L6 1
+Vafm]go6QZXNoz5nBDQg?90
+!s100 nYfS4Nc`eaUZhbS_zdW013
+R7
+33
+Z90 !s110 1765747796
+!i10b 1
+Z91 !s108 1765747796.000000
+Z92 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/PC_Adder.vhd|
+Z93 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/PC_Adder.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 8 pc_adder 0 22 afm]go6QZXNoz5nBDQg?90
+!i122 596
+l14
+L13 4
+V7i]9=Emg18f7oQW1XWATJ3
+!s100 z8^OL>o][O@B76[VzkJ9m2
+R7
+33
+R90
+!i10b 1
+R91
+R92
+R93
+!i113 1
+R12
+R13
+Epclogic
+Z94 w1765749512
+R1
+R2
+R3
+!i122 844
+R4
+Z95 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/PCLogic.vhd
+Z96 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/PCLogic.vhd
+l0
+L5 1
+VYYG0RbPQh5j[IV66U]6HM0
+!s100 65S44bnzIz<H8gljCim411
+R7
+33
+R29
+!i10b 1
+R34
+Z97 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/PCLogic.vhd|
+Z98 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/PCLogic.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 7 pclogic 0 22 YYG0RbPQh5j[IV66U]6HM0
+!i122 844
+l20
+L18 16
+VdL0:zH2gY^]Nk6SgS=DzR2
+!s100 ;Tg1hPlZTd35RIZ3HI4CQ3
+R7
+33
+R29
+!i10b 1
+R34
+R97
+R98
+!i113 1
+R12
+R13
+Eregbank
+Z99 w1765651636
+R15
+R16
+R2
+R3
+!i122 845
+R4
+Z100 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/RegBank.vhd
+Z101 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/RegBank.vhd
+l0
+L6 1
+VPj]iBijZ^KIGIWN27^<?W0
+!s100 oY]73zBJ6DUC>Wn_^CPFC1
+R7
+33
+R29
+!i10b 1
+R34
+Z102 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/RegBank.vhd|
+Z103 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/RegBank.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 7 regbank 0 22 Pj]iBijZ^KIGIWN27^<?W0
+!i122 845
+l20
+L15 24
+Vnh@e[ZMT>ckCn7<]JS1b01
+!s100 0aQHPoY;lSK1b9dMI6C`30
+R7
+33
+R29
+!i10b 1
+R34
+R102
+R103
+!i113 1
+R12
+R13
+Etb_pipeline
+Z104 w1765652777
+R16
+R15
+R2
+R3
+!i122 846
+R4
+Z105 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/tb_pipeline.vhd
+Z106 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/tb_pipeline.vhd
+l0
+L6 1
+VH7>mg7>Yf3TP=XBkQNB:@1
+!s100 IS36_EOHg5O6QPCXJ_OK_0
+R7
+33
+R29
+!i10b 1
+R34
+Z107 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/tb_pipeline.vhd|
+Z108 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/tb_pipeline.vhd|
+!i113 1
+R12
+R13
+Abehavior
+Z109 DEx4 work 21 top_fivestagepipeline 0 22 33aP]fXT2RgRYAh<9`iS?2
+R16
+R15
+R2
+R3
+DEx4 work 11 tb_pipeline 0 22 H7>mg7>Yf3TP=XBkQNB:@1
+!i122 846
+l12
+L9 14
+VXdM7n<OodlVzm3cn6620F1
+!s100 jHB9?jNM0BWZ4DkYm6HVn3
+R7
+33
+R29
+!i10b 1
+R34
+R107
+R108
+!i113 1
+R12
+R13
+Etop_fivestagepipeline
+Z110 w1765754769
+R15
+R16
+R2
+R3
+!i122 847
+R4
+Z111 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/top_FiveStagePipeline.vhd
+Z112 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/top_FiveStagePipeline.vhd
+l0
+L6 1
+V33aP]fXT2RgRYAh<9`iS?2
+!s100 if]oPD8knbd5FHf;ooEoC2
+R7
+33
+R29
+!i10b 1
+R34
+Z113 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/top_FiveStagePipeline.vhd|
+Z114 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/top_FiveStagePipeline.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+R109
+!i122 847
+l268
+L15 538
+Vg5245ZeYj=;c_RHhZ;_;?0
+!s100 CijonXl9VPaz3fHaDO`KT1
+R7
+33
+R29
+!i10b 1
+R34
+R113
+R114
+!i113 1
+R12
+R13
+Eula
+R0
+R15
+R16
+R2
+R3
+!i122 848
+R4
+Z115 8/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ULA.vhd
+Z116 F/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ULA.vhd
+l0
+L6 1
+Vbo9l^@aSa<bWBSofREziD1
+!s100 _7JHFSbjARJWa38382HE62
+R7
+33
+R29
+!i10b 1
+R34
+Z117 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|/home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ULA.vhd|
+Z118 !s107 /home/christian/Downloads/projeto_final_pd_ii-monociclo_pipeline/pipeline/src/ULA.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R15
+R16
+R2
+R3
+Z119 DEx4 work 3 ula 0 22 bo9l^@aSa<bWBSofREziD1
+!i122 848
+l21
+Z120 L15 20
+Z121 VgGP1ozQNn8zb4KcI`cRab0
+Z122 !s100 D=;_e=>0;7zmPPZNK>QHF3
+R7
+33
+R29
+!i10b 1
+R34
+R117
+R118
+!i113 1
+R12
+R13
